@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			padding: 0px;
+			margin: 0;
+			list-style-type: none;
+			text-decoration: none;
+		}
+		.all{
+			width: 100%;
+			margin:0 auto;
+		}
+		.div1{
+			margin-top: 7px;
+			height: 28px;
+			margin-bottom: 30px;
+		}
+
+		.div1 ul li{
+			padding-right: 25px;
+			float: left;
+			font-size: 12px;
+		}
+		.div1 ul li a{
+			color: #a8b5ac;
+		}
+		.div2{
+			color: #a8b5ac;
+			float: left;
+			font-size: 12px;
+		}
+		.search{
+			height: 80px;
+		}
+		.logo{
+			margin-top: -15px;
+			float: left;
+		}
+		.searchbox{
+			width: 584px;
+			height: 40px;
+			margin-left: 248px;
+			display: block;
+		}
+		.searchborder{
+			border: 2px solid #ff4200;
+			margin-top: 25px;
+			height: 35px;
+		}
+		.text{
+			width: 500px;
+			height: 34px;
+			line-height: 20px;
+			font-size: 14px;
+			border:none;
+			float: left;
+			color: #666560;
+		}
+		.submit{
+			height: 36px;
+			width: 80px;
+			border: 0 solid #fe6c00;
+			background-color: #fe6c00;
+			color: #fff;
+			font-size: 16px;
+			float: left;
+		}
+		.fuwu{
+			margin-left: 900px;
+			margin-top: -40px;
+		}
+		.phone{
+			width: 85px;
+			height: 40px;
+			border: 1px solid #a8b5ac;
+			margin-left:2px;
+			float: left;
+		}
+		.phone img{
+			padding-top: 6px;
+			padding-left: 23px;
+		}
+		.phone span{
+			font-size: 12px;
+			color: #a8b5ac;
+			margin-top: -8px;
+			float: left;
+		}
+		.xiaoxi{
+			width: 85px;
+			height: 40px;
+			border: 1px solid #a8b5ac;
+			margin-left:2px;
+			float: left;
+		}
+		.xiaoxi img{
+			padding-top: 10px;
+			padding-left: 23px;
+		}
+		.xiaoxi span{
+			font-size: 12px;
+			color: #a8b5ac;
+			float: left;
+		}
+		.question{
+			width: 85px;
+			height: 40px;
+			border: 1px solid #a8b5ac;
+			margin-left:2px;
+			float: left;
+			background-color: #fe6c00;
+		}
+		.question img{
+			padding-top: 12px;
+		}
+		.question a{
+			color: #fff;
+		}
+		.search ul{
+			margin-left: 110px;
+			margin-top: 10px;
+			float: left;
+		}
+		.search ul li{
+			font-size: 12px;
+			padding-left: 5px;
+			float: left;
+		}
+		.search ul li a{
+			color: #666560;
+		}
+		
+
+		.headnav{
+			width: 100%;
+			height: 40px;
+			background-color: black;
+		}
+		.head_nav{
+			width: 1180px;
+			height: 40px;
+			margin: 0 auto;
+		}
+		.heaa_nav ul{
+			width: 1016px;
+			height: 40px;
+			float: left;
+		}
+		.head_nav ul li{
+			width: 97px;
+			height: 40px;
+			margin-right: 30px;
+			text-align: center;
+			font-weight: 700;
+			float: left;
+		}
+		.head_nav ul li a{
+			color: white;
+			line-height: 39px;
+		}
+
+		.screen{
+			width: 100%;
+			height: 776px;
+			background-color: #f6f5f4;
+		}
+		.screen_top{
+			width: 1180px;
+			height: 39px;
+			margin:0 auto;
+		}
+		.screen_top p{
+			font-size: 13px;
+			line-height: 40px;
+			color: black;
+		}
+		.screen_top p a{
+			color: black;
+		}
+
+		#box{
+			width:408px;
+			height:629px;
+			position:relative;
+			left: 20px;
+			top:20px;
+			float: left;
+			z-index: 1;
+		}
+		#img1{
+			width:408px;
+			height:408px;
+			position:absolute;
+			left:0;
+			top:0;
+			border: 1px solid #E8E8E8;
+		}
+		#slider{
+			width:150px;
+			height:150px;
+			position:absolute;
+			left:0;
+			top:0;
+			background:#5C5655;
+			opacity:0.4;
+			cursor: move;
+			display:none; 
+			filter:alpha(opacity=40);
+		}
+		#img2{position:absolute;
+			right:0;
+			top:0;
+			left:408px;
+			display:none; 
+			width:408px;
+			height:408px;
+			overflow:hidden;
+			border: 1px solid #E8E8E8;
+			z-index: 1;
+		}
+		#Bimg{
+			position:absolute;
+			left:0;
+			top:0;
+		}
+		.small{
+			width: 410px;
+			width: 219px;
+			position: absolute;
+			top:428px;
+		}
+
+		.screen_center_left_right{
+			width: 538px;
+			height: 609px;
+			position: relative;
+			float: left;
+			left: 40px;
+			top:20px;
+		}
+		.screen_center_left_right_hd{
+			width: 538px;
+			height: 100px;
+		}
+		.screen_center_left_right_hd h1{
+			font-size: 16px;
+			padding-bottom: 12px;
+		}
+		.screen_center_left_right_hd p{
+			font-size: 14px;
+			line-height: 22px;
+		}
+		.screen_center_left_right_center{
+			width: 538px;
+			height: 130px;
+			margin-left: 10px;
+		}
+		.screen_center_left_right_center{
+			width: 538px;
+			height: 130px;
+		}
+		.huazhuangpin{
+			width: 558px;
+			height: 50px;
+			font-size: 14px;
+		}
+		.huazhuangpin p{
+			float: left;
+		}
+		.hanliang{
+			width: 62px;
+			height: 30px;
+			margin-left: 27px;
+			float: left;
+			text-align: center;
+			line-height: 35px;
+			cursor: pointer;
+			position: relative;
+		}
+		.number{
+			width: 558px;
+			height:50px;
+			font-size: 14px;
+		}
+		.dec{
+			width: 27px;
+			height: 32px;
+			margin-left: 65px;
+			border:1px solid #f7f6f5;
+			text-align: center;
+			float: left;
+			line-height: 30px;
+			font-size: 15px;
+		}
+		.cnt{
+			width: 50px;
+			height: 30px;
+			float: left;
+			border:1px solid #f7f6f5;
+			text-align: center;
+		}
+		.add{
+			width: 27px;
+			height: 32px;
+			border:1px solid #f7f6f5;
+			display: block;
+			float: left;
+			text-align: center;
+			line-height: 30px;
+			font-size: 15px;
+		}
+
+		.buy{
+			width: 558px;
+			height: 40px;
+			margin-left: 65px;
+		}
+		.buy button{
+			width: 150px;
+			height: 40px;
+		}
+		.goumai{
+			background-color: white;
+			border:1px solid #ff0754;
+			color: #ff0754;
+			border-radius: 8px;
+			margin-right:25px;
+			font-weight: bold;
+		}
+		.goumai:hover{
+			cursor: pointer;
+		}
+		.gouwuche{
+			background-color: #ff0754;
+			border-radius: 15%;
+			border:1px solid #ff0754;
+			color: white;
+			font-weight: bold;
+		}
+		.gouwuche:hover{
+			cursor: pointer;
+		}
+		.xuanze{
+			width: 558px;
+			height: 30px;
+			margin-bottom: 20px;
+		}
+		.text1{
+			width: 68px;
+			margin-left: 90px;
+			line-height: 30px;
+			float: left;
+			font-size: 13px;
+		}
+		.text2{
+			width: 70px;
+			line-height: 30px;
+			color: #ff9003;
+			font-size: 14px;
+			margin-left: 20px;
+			float: left;
+		}
+
+		.bottom{
+			width: 100%;
+			height: 330px;
+			margin:0 auto;
+		}
+		.bottom_top{
+			width: 100%;
+			height: 30px;
+		}
+		.bottom_center{
+			width: 1180px;
+			height: 155px;
+			margin:0 auto;
+		}
+		.bottom_center_logo{
+			width: 230px;
+			height: 155px;
+			margin-top: -25px;
+			float: left;
+		}
+		.bottom_center_center{
+			width: 780px;
+			height: 155px;
+			float: left;
+		}
+		.bottom_center_center_help{
+			width: 130px;
+			height: 155px;
+			line-height: 27px;
+			float: left;
+		}
+		.bottom_center_center_help li a{
+			font-size: 14px;
+			color: #666560;
+		}
+		.bottom_center_bottom{
+			width: 1180px;
+			height: 154px;
+			margin:0 auto;
+			text-align: center;
+		}
+		.bottom_center_bottom_p_a{
+			color: #666560;
+			font-size: 13px;
+		}
+		.bottom_center_bottom_p_span{
+			margin:0 3px;
+			color: #999;
+		}
+		.bottom_center_bottom_copyright{
+			line-height: 23px;
+			color: #999;
+		}
+		.bottom_center_bottom_copyright a{
+			color: #999;
+			font-size: 12px;
+		}
+		#cover{
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgba(0,0,0,0.3);
+            display:none;
+            z-index:1000;
+        }
+        .box{
+        	width: 400px;
+        	height: 225px;
+        	border:5px solid #aca9d3;
+        	background-color: white;
+        	position: absolute;
+        	left: 0;
+        	right: 0;
+        	top: 0;
+        	bottom:0;
+        	margin:auto;
+        }
+
+        .close{
+        	float: right;
+        	margin-right: 10px;
+        	margin-top: 5px;
+        }
+        .close:hover{
+        	cursor: pointer;
+        }
+        .box div button{
+        	width: 149px;
+        	height: 40px;
+        	margin-left: 30px;
+        }
+        .continue{
+        	width: 149px;
+        	height: 40px;
+        	background-color: white;
+        	border: 1px solid #ff0754;
+        	font-size: 16px;
+        	font-weight: bold;
+        	color: #ff0754;
+        }
+        .continue:hover{
+        	cursor: pointer;
+        }
+        .account{
+        	background-color: #ff0754;
+        	font-size: 16px;
+        	font-weight: bold;
+        	color: white;
+        	border: 1px solid white;
+        }
+        .account:hover{
+        	cursor: pointer;
+        }
+        .duigou{
+        	position: absolute;
+        	top:18px;
+        	right: 0px;
+        }
+	</style>
+</head>
+<body>
+	<div class="all">
+		<div class="header" id="header">
+			<div style="width: 1180px; margin:0 auto">
+				<div class="div1">
+					<div class="div2">帮5买，享帮帮</div> 
+					<ul>
+						<li style="margin-left: 290px;"><a href=""><img src="./img/qq.png"></a></li>
+						<li><a href=""><img src="./img/weixin.png"></a></li>
+						<li><a href=""><img src="./img/weibo.png"></a></li>
+						<li><a href="">登录</a></li>
+						<li><a href="">注册</a></li>
+						<li><a href=""><img src="./img/xiaoxi.png">消息</a></li>
+						<li><a href=""><img src="./img/dingdan.jpg">我的订单</a></li>
+						<li><a href="">我的收藏</a></li>
+						<li><a href="">帮钻兑换</a></li>
+						<li><a href=""><img src="./img/tp-my-phone.png">手机版</a></li>
+						<li><a href="">帮5淘</a></li>
+						<li><a href="">客户服务</a></li>
+						<li><a href=""><img src="./img/gouwuche.jpg">购物车</a></li>
+					</ul>
+				</div>
+				<div class="search">
+					<div class="logo"><img src="./img/logo_03.jpg"></div>
+					<div class="searchbox">
+						<div class="searchborder">
+							<form>
+								<input type="text" class="text" value="输入商品网址或关键词，直通全网，快速帮5购！" />
+								<input type="submit" value="搜全网" class="submit" />
+							</form>
+						</div>
+						
+					</div>
+					<div class="fuwu">
+						<div class="phone">
+							<img src="./img/kefu.png">
+							<span>400-085-0505</span>
+						</div>
+						<div class="xiaoxi">
+							<img src="./img/xiaoxi.png">
+							<span>mc@b5m.com</span>
+						</div>
+						<div class="question">
+							<img src="./img/wenhao.jpg">
+							<a href="">常见问题</a>
+						</div>
+					</div>
+					<ul>
+						<li><a href="" style="color: #ff0000">洗护护发</a></li>
+						<li><img src="./img/juxing.png"></li>
+						<li><a href="" style="color: #ff0000">日本纸尿裤</a></li>
+						<li><img src="./img/juxing.png"></li>
+						<li><a href="">身体乳</a></li>
+						<li><img src="./img/juxing.png"></li>
+						<li><a href="">内衣文胸</a></li>
+						<li><img src="./img/juxing.png"></li>
+						<li><a href="" style="color: #c0cae0">iPhone 6s</a></li>
+						<li><img src="./img/juxing.png"></li>
+						<li><a href="" style="color: #c0cae0">iPad Air2</a></li>
+						<li><img src="./img/juxing.png"></li>
+						<li><a href="">牛仔裤</a></li>
+						<li><img src="./img/juxing.png"></li>
+						<li><a href="">奶粉</a></li>
+						<li><img src="./img/juxing.png"></li>
+						<li><a href="">防晒霜</a></li>
+						<li><img src="./img/juxing.png"></li>
+						<li><a href="">伞</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="headnav">
+			<div class="head_nav">
+				<ul>
+					<li><a href="">首页</a></li>
+					<li><a href="">热门品牌</a></li>
+					<li><a href="">美妆个护</a></li>
+					<li><a href="">服饰鞋包</a></li>
+					<li><a href="">母婴生活</a></li>
+					<li><a href="">食品保健</a></li>
+					<li><a href="">韩国直邮</a></li>
+					<li><a href="">跨境购</a></li>
+
+				</ul>
+				<a href=""><img src="./img/ff_03.jpg"></a>
+			</div>
+		</div>
+
+		<!-- 主体部分 -->
+		<div class="screen">
+			<div class="screen_top">
+				<p><a href="">首页>美容护肤/美体/精油>防晒>韩国RE:CIPE水晶清爽防水防晒喷雾SPF50 150ml/瓶</a></p>
+			</div>
+
+			<!-- 最中间部分 -->
+			<div style="width: 1180px;height: 629px;background-color: white;margin:0 auto;">
+
+				<!-- 放大镜部分 -->
+				<div id="box">
+					<div id="img1">
+						<img id="bimg" src="./img/pp0.jpeg" style="width: 408px;
+								height: 408px;">
+						<div id="slider"></div>
+					</div>
+
+					<div id="img2">
+	        			<img src="./img/pp0.jpeg"  id="Bimg" style="width: 1224px; height: 1224px"/>
+	    			</div>
+
+					<!-- 放大镜下面 -->
+					<div class="small">
+						<a href=""><img src="./img/spanl.jpg"></a>
+						<img id="simg1" src="./img/sp0.jpeg">
+						<img id="simg2" src="./img/sp1.jpeg">
+						<a href=""><img style="left: 385px;position: absolute;" src="./img/spanr.jpg"></a>
+					</div>
+
+				</div>
+
+				<!-- 放大镜右边 -->
+				<div class="screen_center_left_right">
+					<div class="screen_center_left_right_hd">
+						<h1>韩国RE:CIPE水晶清爽防水防晒喷雾SPF50 150ml/瓶</h1>
+						<p>【限购3件】超透明无痕防晒，防水防汗定妆，保湿降温不粘腻。水晶防晒喷雾，喷后皮肤水润，不油，不留白，更不会像防晒霜那样抹不开，非常实用，开始存货吧。</p>
+					</div>
+					<div class="screen_center_left_right_center">
+						<ul>
+							<li><span style="font-size: 12px;/*padding-left: 20px;*/">价格</span>
+							<span style="color: #ff5303;padding-left:55px">¥71</span>
+							<span style="/*padding-left: 22px;*/font-size: 12px;text-decoration: line-through;">¥150</span></li>
+							<li style="margin-left: -20px;"><img src="./img/ss_09.jpg"></li>
+						</ul>
+					</div>
+
+					<div class="huazhuangpin">
+						<p>化妆品净含量</p>
+						<div class="hanliang" id="ml-left" style="position:relative;">150ml</div>
+						<div class="hanliang" id="ml-right">200ml</div>
+					</div>
+					
+
+					<!-- 商品数量加减号 -->
+					<div class="number">
+						<a href="" style="float: left;">数量</a>
+						<div id="dec" class="dec" style="cursor: pointer;">-</div>
+						<input class="cnt" type="text" value="1" id="cnt">
+						<div class="add" id="add" style="cursor: pointer;">+</div>
+						<div style="margin-left: 225px;line-height: 30px;font-size: 13px;">件（库存5件）</div>
+					</div>
+
+
+
+					<div style="margin-left: -20px"><img src="./img/oo_03.jpg"></div>
+					<div class="xuanze" id="choose"></div>
+					<div class="buy">
+						<button class="goumai">立即购买</button>
+						<button class="gouwuche" id="gouwuche">加入购物车</button>
+
+						<!-- 蒙罩效果 -->
+						<div id="cover">
+							<div class="box">
+								<div class="close" id="close">X</div>
+								<img src="./img/rr11_02.jpg"">
+								<div>
+									<a><button class="continue" id="continue">继续购物</button></a>
+									<a><button class="account" id="account">去购物车结算</button></a>
+								</div>
+							</div>
+					    </div>
+					</div>
+				</div>
+				
+				<!-- 最右边 -->
+				<div style="float: right;">
+					<img src="./img/ww_07.jpg">
+				</div>
+
+				<!-- 主题下方 -->
+				<div>
+					<img src="./img/a_07.jpg">
+				</div>
+				
+			</div>
+
+		</div>
+
+		<!-- 最下方 -->
+		<div class="bottom">
+			<div class="bottom_top"></div>
+			<div class="bottom_center">
+				<div class="bottom_center_logo"><img src="./img/loginB.jpg"></div>
+				<div class="bottom_center_center">
+					<div class="bottom_center_center_help">
+						<h3>购物指南</h3>
+						<ul>
+							<li><a href="">如何下单</a></li>
+							<li><a href="">帮5购流程</a></li>
+							<li><a href="">订单查询</a></li>
+							<li><a href="">物流配送</a></li>
+						</ul>
+					</div>
+					<div class="bottom_center_center_help">
+						<h3>支付相关</h3>
+						<ul>
+							<li><a href="">支付方式</a></li>
+							<li><a href="">安全设置</a></li>
+							<li><a href="">账户信息</a></li>
+						</ul>
+					</div>
+					<div class="bottom_center_center_help">
+						<h3>售后服务</h3>
+						<ul>
+							<li><a href="">取消订单</a></li>
+							<li><a href="">申请售后</a></li>
+							<li><a href="">退货流程</a></li>
+							<li><a href="">退款相关</a></li>
+						</ul>
+					</div>
+					<div class="bottom_center_center_help">
+						<h3>VIP服务</h3>
+						<ul>
+							<li><a href="">VIP优惠</a></li>
+							<li><a href="">如何成为VIP</a></li>
+							<li><a href="">超级帮钻</a></li>
+						</ul>
+					</div>
+					<div class="bottom_center_center_help">
+						<h3>帮韩品</h3>
+						<ul>
+							<li><a href="">韩国正品</a></li>
+							<li><a href="">闪电发货</a></li>
+							<li><a href="">帮韩品售后</a></li>
+						</ul>
+					</div>
+					<div class="bottom_center_center_help">
+						<h3>更多</h3>
+						<ul>
+							<li><a href="">手机APP</a></li>
+							<li><a href="">帮5采APP</a></li>
+							<li><a href="">帮5淘插件</a></li>
+							<li><a href="">其他</a></li>
+						</ul>
+					</div>
+				</div>
+				<div><img src="./img/erweima.jpg"></div>
+			</div>
+			<div style="border: 1px solid #ebeae8"></div>
+			<div class="bottom_center_bottom">
+				<div>
+					<p>
+						<a href="" class="bottom_center_bottom_p_a">关于帮5买</a>
+						<span class="bottom_center_bottom_p_span">|</span>
+						<a href="" class="bottom_center_bottom_p_a">联系我们</a>
+						<span class="bottom_center_bottom_p_span">|</span>
+						<a href="" class="bottom_center_bottom_p_a">合作商家</a>
+						<span class="bottom_center_bottom_p_span">|</span>
+						<a href="" class="bottom_center_bottom_p_a">友情链接</a>
+						<span class="bottom_center_bottom_p_span">|</span>
+						<a href="" class="bottom_center_bottom_p_a">加入我们</a>
+						<span class="bottom_center_bottom_p_span">|</span>
+						<a href="" class="bottom_center_bottom_p_a">移动应用</a>
+						<span class="bottom_center_bottom_p_span">|</span>
+						<a href="" class="bottom_center_bottom_p_a">热门</a>
+						<span class="bottom_center_bottom_p_span">|</span>
+						<a href="" class="bottom_center_bottom_p_a">广告联盟</a>
+						<span class="bottom_center_bottom_p_span">|</span>
+						<a href="" class="bottom_center_bottom_p_a">使用条款</a>
+					</p>
+				</div>
+				<div class="bottom_center_bottom_copyright">
+					<p><a href="">Copyright©2011-2015 B5M.COM.ALL rights reserved.Powered by B5Msoft Co.Ltd</a></p>
+					<p><a href="">增值电信业务经营许可证：沪B2-20130065号|中华人民共和国互联网药品信息服务资格证书（沪）-非经营性-2013-0034 沪卫(中医)网申【2015】 10032号 沪ICP备11034776号-3|食品流通许可证：SP3101151410301755</a></p>
+				</div>
+				<div>
+					<a href=""><img src="./img/bo1.gif"></a>
+					<a href=""><img src="./img/bo2.png"></a>
+					<a href=""><img src="./img/bo3.gif"></a>
+					<a href=""><img src="./img/bo4.png"></a>
+					<a href=""><img src="./img/bo5.png"></a>
+					<a href=""><img src="./img/bo6.png"></a>
+					<a href=""><img src="./img/bo7.png"></a>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+</body>
+<script type="text/javascript">
+	//放大镜
+	var box = document.getElementById('box');
+ 	var img1 = document.getElementById('img1');
+ 	var img2 = document.getElementById('img2');
+ 	var slider = document.getElementById('slider');
+ 	var Bimg = document.getElementById('Bimg')
+
+ 	img1.onmouseover = function(){
+ 		slider.style.display = 'block';
+ 		img2.style.display = 'block';
+ 	}
+
+ 	img1.onmouseout = function(){
+ 		slider.style.display = 'none';
+ 		img2.style.display = 'none';
+ 	}
+
+ 	//鼠标移动
+ 	img1.onmousemove = function(ev){
+ 		var oL = ev.clientX-box.offsetLeft-slider.offsetWidth/2;
+ 		var oT = ev.clientY-box.offsetTop-slider.offsetHeight/2;
+
+ 		var oMaxw = img1.offsetWidth-slider.offsetWidth;
+ 		var oMaxh = img1.offsetHeight-slider.offsetHeight;
+
+ 		oL = oL>oMaxw?oMaxw:oL<0?0:oL;
+ 		oT = oT>oMaxh?oMaxh:oT<0?0:oT; 
+
+ 		slider.style.left = oL+'px';
+ 		slider.style.top = oT+'px';
+
+ 		var scale = Bimg.offsetHeight/img1.offsetHeight;
+ 		Bimg.style.left = -oL*scale+'px';
+ 		Bimg.style.top = -oT*scale+'px'
+
+ 	}
+
+ 	//小图对应放大镜大图
+ 	var simg1 = document.getElementById('simg1');
+ 	var simg2 = document.getElementById('simg2');
+ 	var bimg = document.getElementById('bimg');
+ 	simg1.onclick = function(){
+ 		bimg.src="./img/pp0.jpeg";
+ 		Bimg.src="./img/pp0.jpeg";
+ 		simg1.style.border='2px solid #ff4d04';
+ 		simg2.style.border='0';
+ 	}
+
+ 	simg2.onclick = function(){
+ 		bimg.src= "./img/pp1.jpeg";
+ 		Bimg.src="./img/pp1.jpeg";
+ 		simg2.style.border='2px solid #ff4d04';
+ 		simg1.style.border='0';
+ 	}
+
+
+ 	var left = document.getElementById('ml-left');
+	var right = document.getElementById('ml-right');
+	var choose = document.getElementById('choose');
+	left.onclick = function(){
+		choose.innerHTML='';
+		var div1 = document.createElement('div');
+		var div2 = document.createElement('div');
+		var text2 = document.createTextNode("“150ml”");
+		var text1 = document.createTextNode("您已选择");
+		div1.setAttribute('class','text1');
+		div2.setAttribute('class','text2');
+		choose.appendChild(div1);
+		choose.appendChild(div2);
+		div1.appendChild(text1);
+		div2.appendChild(text2);
+		left.innerHTML='150ml';
+		left.style.border = '1px solid red';
+		var img = new Image();
+		img.src= "./img/duigou.png";
+		left.appendChild(img);
+		img.setAttribute('class','duigou');
+		right.innerHTML='200ml';
+		right.style.border='';
+	}
+
+	right.onclick=function(){
+		choose.innerHTML='';
+		var div1 = document.createElement('div');
+		var div2 = document.createElement('div');
+		var text2 = document.createTextNode("“200ml”");
+		var text1 = document.createTextNode("您已选择");
+		div1.setAttribute('class','text1');
+		div2.setAttribute('class','text2');
+		choose.appendChild(div1);
+		choose.appendChild(div2);
+		div1.appendChild(text1);
+		div2.appendChild(text2);
+		right.innerHTML='200ml';
+		right.style.border = '1px solid red';
+		var img = new Image();
+		img.src= "./img/duigou.png";
+		right.appendChild(img);
+		img.setAttribute('class','duigou');
+		left.innerHTML='150ml';
+	 	left.style.border='';
+	}
+
+
+
+	var gouwuche = document.getElementById('gouwuche');
+	var continue1 = document.getElementById('continue');
+    var account = document.getElementById('account');
+    var close = document.getElementById('close');
+    gouwuche.onclick = function(){
+        var cover=document.getElementById('cover');
+        cover.style.display='block';
+        	
+    }
+    continue1.onclick = function(){
+        cover.style.display='none';
+    }
+ 
+ 	account.onclick = function(){
+ 		cover.style.display='none';
+ 	}
+
+ 	close.onclick = function(){
+ 		cover.style.display='none';
+ 	}
+
+
+ 	// 商品数量加减号
+ 	var dec = document.getElementById('dec');
+	var cnt = document.getElementById('cnt');
+	var add = document.getElementById('add');
+
+	add.onclick = function(){
+		var num = cnt.value;
+		console.log(num);
+		if(num<5 && num>=0){
+			cnt.value++;
+		}else if(num==5){
+			cnt.value=5;
+			add.style.cursor = 'not-allowed';
+		}
+	}
+	add.onmouseover = function(){
+		var num = cnt.value;
+		if (num==5) {
+			add.style.cursor = 'not-allowed';
+		}else{
+			add.style.cursor = 'pointer';
+		}
+	}
+
+	dec.onclick = function(){
+		var num = cnt.value;
+		if(num<=5 && num>1){
+			cnt.value--;
+		}else if(num==1){
+			cnt.value=1;
+			dec.style.cursor = 'not-allowed';
+		}
+	}
+	dec.onmouseover = function(){
+		var num = cnt.value;
+		if (num==1) {
+			dec.style.cursor = 'not-allowed';
+		}else{
+			dec.style.cursor = 'pointer';
+		}
+	}
+ 	
+</script>
+</html>
